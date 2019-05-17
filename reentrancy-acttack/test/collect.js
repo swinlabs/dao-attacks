@@ -10,7 +10,7 @@ contract('Re-entrancy test', async (accounts) =>
 
     let owner = accounts[0];
     console.log(`victim address is ${owner}`);
-    let attacker = accounts[9];
+    let attacker = accounts[1];
     console.log(`attacker address is ${attacker}`);
 
     let user1 = accounts[5];
