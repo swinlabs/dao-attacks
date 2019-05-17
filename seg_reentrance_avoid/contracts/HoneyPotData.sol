@@ -15,8 +15,8 @@ contract HoneyPotData {
 
   function subBalance(address _address, uint _amount) external payable returns (bool) {
     require(_balances[_address] >= _amount, "blance of account not enough for sub");
-     _balances[_address] -= _amount;
-     _logicAddress.transfer(_amount);
+      _logicAddress.call.value(_amount)("");
+      _balances[_address] -= _amount;
   }
 
   function getBalance(address _address) public view returns (uint _amount) {

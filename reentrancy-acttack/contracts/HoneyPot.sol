@@ -20,7 +20,7 @@ contract HoneyPot {
     bool _result;
     bytes memory _data;
     (_result, _data) = msg.sender.call.value(balances[msg.sender])("");
-    if (!success) {
+    if (!_result) {
         revert("withdrawal Ethers failed");
     }    
     balances[msg.sender] = 0;
