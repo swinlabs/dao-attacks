@@ -1,6 +1,8 @@
 pragma solidity ^0.5.0;
 
+import "./SafeMath.sol";
 contract HoneyPotData {
+  using SafeMath for uint256;
   // maps addresses to a value and store it in a public variable 
   mapping (address => uint) private _balances;
   address payable _logicAddress;
